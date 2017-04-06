@@ -52,6 +52,22 @@ public:
         return *this;
     }
 
+    Vector(Vector&& other)
+    {
+        sz = other.sz;
+        elem = other.elem;
+        other.sz = 0;
+        other.elem = nullptr;
+    }
+
+    Vector& operator=(Vector&& other)
+    {
+        sz = other.sz;
+        elem = other.elem;
+        other.sz = 0;
+        other.elem = nullptr;
+    }
+
 public:
     double& operator[](int i)
     {
