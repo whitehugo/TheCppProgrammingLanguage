@@ -39,25 +39,25 @@ double read_and_sum(cpp_primer::Vector& v)
 
 Vector testReturnDirectly()
 {
-    Vector v(5);
+    Vector v(2, 1024);
     return v;
 }
 
 Vector& testReturnByRef()
 {
-    Vector v(5);
+    Vector v(2, 1024);
     return v;
 }
 
 Vector* testReturnByPtr()
 {
-    Vector v(5);
+    Vector v(2, 1024);
     return &v;
 }
 
 Vector* testReturnHeapAllocatedVal()
 {
-    Vector* v = new Vector(5);
+    Vector* v = new Vector(2, 1024);
     return v;
 }
 
@@ -85,8 +85,8 @@ int main(int argc, char *argv[])
     //cpp_primer::Vector v(6);
     //cout << "sum of v is " << read_and_sum(v) << endl;
 
-    cpp_primer::Test t;
-    t.test();
+   // cpp_primer::Test t;
+   // t.test();
 
     Vector& v1 = testReturnDirectly();
     Vector& v2 = testReturnByRef();
@@ -94,10 +94,14 @@ int main(int argc, char *argv[])
     Vector* v4 = testReturnHeapAllocatedVal();
     Vector v5 = testReturnByRef();
     cout << v1.size()
+            << "\n"
          << v2.size()
+            << "\n"
          << v3->size()
+            << "\n"
          << v4->size()
-         << v5.size() \
+            << "\n"
+         << v5.size()
          << endl;
 
     //static_assert(8<=sizeof(int), "integer too small!");
