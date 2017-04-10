@@ -1,7 +1,8 @@
 #include "test.h"
 #include <iostream>
 
-void cpp_primer::Test::test()
+template <typename From, typename To>
+void cpp_primer::Test<From,To>::test()
 {
-    std::cout << "test" << std::endl;
+
 }

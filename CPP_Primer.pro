@@ -97,12 +97,14 @@ HEADERS += \
     ../stl/valarray \
     ../stl/vector \
     ../stl/vector.h \
-    complex.h
+    complex.h \
+    vec.h
 
 SOURCES += main.cpp \
     myvector.cpp \
     test.cpp \
-    complex.cpp
+    complex.cpp \
+    vec.cpp
 
 DISTFILES += \
     .gitignore
